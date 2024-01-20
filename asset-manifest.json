@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/farafina/static/css/main.6fb1f517.css",
-    "main.js": "/farafina/static/js/main.31affa0d.js",
+    "main.css": "/farafina/static/css/main.ff5968e2.css",
+    "main.js": "/farafina/static/js/main.b944437e.js",
     "static/media/Page2.png": "/farafina/static/media/Page2.c6f345b6e25e858998a9.png",
     "static/media/Page3.png": "/farafina/static/media/Page3.13a3e552e904c69834ea.png",
+    "static/media/profile.png": "/farafina/static/media/profile.4358644ff2f75af86fb9.png",
+    "static/media/profile-3.jpg": "/farafina/static/media/profile-3.b2fafa24efe642276d90.jpg",
+    "static/media/profile-1.png": "/farafina/static/media/profile-1.5686cb3c393b2f19853b.png",
     "static/media/Page1.png": "/farafina/static/media/Page1.1a85563a2aa94ae61816.png",
     "index.html": "/farafina/index.html",
-    "main.6fb1f517.css.map": "/farafina/static/css/main.6fb1f517.css.map",
-    "main.31affa0d.js.map": "/farafina/static/js/main.31affa0d.js.map"
+    "main.ff5968e2.css.map": "/farafina/static/css/main.ff5968e2.css.map",
+    "main.b944437e.js.map": "/farafina/static/js/main.b944437e.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fb1f517.css",
-    "static/js/main.31affa0d.js"
+    "static/css/main.ff5968e2.css",
+    "static/js/main.b944437e.js"
   ]
 }
