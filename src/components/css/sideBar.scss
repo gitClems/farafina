@@ -12,7 +12,9 @@
     .side-bar-liste {
         background-color: white;
         min-width: 250px;
-
+        display: flex;
+        flex-direction: column;
+        
         .profile {
 
             // margin-top: 20px;
@@ -34,7 +36,7 @@
                 align-items: center;
                 background-color: var(--my-color);
                 border-radius: 50%;
-                color: black;
+                color: white;
             }
 
         }

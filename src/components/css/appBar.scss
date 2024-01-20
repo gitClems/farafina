@@ -37,13 +37,12 @@ select:focus {
     box-shadow: 0px 0px 5px grey;
     // width: 100%;
 
-    * {
-        font-family: var(--font-family);
-        color: black;
-    }
+    // * {
+    // }
 
     a {
         text-decoration: none;
+        color: black;
     }
 
 
@@ -52,6 +51,12 @@ select:focus {
         display: flex;
         width: 100%;
         max-width: 700px;
+
+        svg {
+            * {
+                color: white;
+            }
+        }
 
         select {
             //outline: 3px solid grey;
@@ -99,6 +104,12 @@ select:focus {
         align-items: center;
         height: 60px;
 
+        svg {
+            * {
+                color: white;
+            }
+        }
+
 
         .logo,
         .search-bar,
@@ -120,11 +131,13 @@ select:focus {
             border-radius: 5px;
             background-color: var(--my-color);
             // display: block;
+            cursor: pointer;
+            color: white;
 
 
             &:hover {
                 outline: 2px solid var(--my-color-2);
-                background-color: var(--my-color);
+                // background-color: var(--my-color);
                 border-radius: 5px;
             }
 
@@ -135,9 +148,6 @@ select:focus {
             }
         }
 
-        .connexion {
-            cursor: pointer;
-        }
     }
 
     .l2-min {
@@ -150,23 +160,18 @@ select:focus {
     .l2 {
         border-top: 2px solid rgba(128, 128, 128, 0.3);
         display: flex;
-        // align-items: center;
-        // min-height: 50px;
 
         a {
-            // background-color: red;
             width: fit-content;
         }
 
         .menu-toggle-open {
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
             cursor: pointer;
+            margin-left: 20px;
 
             svg {
-                height: 30px;
-                width: 30px;
+                height: 40px;
+                width: 40px;
             }
         }
 

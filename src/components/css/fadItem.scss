@@ -1,11 +1,8 @@
 #fad {
-    // height: 200px;
-    // width: 200px;
-    // background-color: green;
     display: flex;
     
-    
     img {
+        border-radius: 20px;
         object-fit: fill;
         width: 100%;
     }

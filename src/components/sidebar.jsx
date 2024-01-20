@@ -14,6 +14,95 @@ const Sidebar = () => {
                     <div className='photo'>Bc</div>
                     <span>BAMOGO Clément</span>
                 </div>
+                <div style={{ overflowY: 'scroll', height :'100%',}}>
+                    <span style={{color : "red"}}>Title of something 1</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span>Title of something</span> <br />
+                    <span style={{color : "red"}}>Title of something n</span> <br />
+                </div>
             </div>
             <div className='side-bar-empty' onClick={closeMenu}>
                 <div className='menu-toggle-close'>
