@@ -1,7 +1,10 @@
 #home-page {
     padding: 20px 10px 0px 10px;
     background: url('../../assets/backgrounds/back-2.jpg');
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     min-height: 100vh;
 
     .sec1 {
