@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import AppBar from './components/appBar';
 import Home from './pages/index/home';
+import Detail from './pages/index/detail';
+import Page404 from './pages/index/page404'
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
         <div id="app">
           <AppBar />
           <Routes>
-            <Route path='/' element = {<Home/>}></Route>
+            <Route path='/' index element={<Home />} />
+            <Route path='/produit/:id' element={<Detail />} />
+            <Route path='/*' element={<Page404 />} />
           </Routes>
         </div>
       </body>

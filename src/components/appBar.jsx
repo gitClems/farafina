@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Sidebar from './sidebar';
+import ScrollUp from './scollUp';
 
 
 function AppBar() {
@@ -16,6 +17,7 @@ function AppBar() {
     return (
         <div id='app-bar'>
             <Sidebar />
+            <ScrollUp />
             <div className='l1'>
                 <Link className='logo' to={"/"}>
                     Farafina

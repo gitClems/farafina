@@ -30,21 +30,14 @@ select:focus {
     border: 1px solid rgba(128, 128, 128, 0.5);
 }
 
-
 #app-bar {
     background-color: var(--primary);
     z-index: 100;
     box-shadow: 0px 0px 5px grey;
-    // width: 100%;
-
-    // * {
-    // }
 
     a {
         text-decoration: none;
-        color: black;
     }
-
 
     .search-bar {
         height: 35px;
@@ -52,15 +45,9 @@ select:focus {
         width: 100%;
         max-width: 700px;
 
-        svg {
-            * {
-                color: white;
-            }
-        }
-
         select {
             //outline: 3px solid grey;
-            background-color: rgba(128, 128, 128, 0.2);
+            // background-color: rgba(128, 128, 128, 0.2);
             border-radius: 5px 0px 0px 5px;
             border: none;
             padding-left: 10px;
@@ -78,7 +65,7 @@ select:focus {
             height: 100%;
             border: none;
             cursor: pointer;
-            background-color: var(--my-color);
+            // background-color: var(--my-color);
 
             &:hover {
                 box-shadow: 0px 0px 5px grey;
@@ -90,12 +77,13 @@ select:focus {
         input {
             padding-left: 10px;
             width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
         }
     }
 
-
     .l1 {
-
+        background-color: var(--my-color);
         padding: 0px 10px;
         display: flex;
         flex: none;
@@ -104,12 +92,9 @@ select:focus {
         align-items: center;
         height: 60px;
 
-        svg {
-            * {
-                color: white;
-            }
+        a {
+            color: white;
         }
-
 
         .logo,
         .search-bar,
@@ -125,20 +110,22 @@ select:focus {
             font-size: 30px;
         }
 
-
         .shopping-cart,
         .connexion {
             border-radius: 5px;
-            background-color: var(--my-color);
-            // display: block;
+            background-color: white;
             cursor: pointer;
-            color: white;
-
+            color: black;
+            transition: 0.2s;
 
             &:hover {
-                outline: 2px solid var(--my-color-2);
-                // background-color: var(--my-color);
                 border-radius: 5px;
+                background-color: var(--my-color-2);
+                transition: 0.2s;
+
+                * {
+                    color: white;
+                }
             }
 
             svg {
@@ -160,9 +147,11 @@ select:focus {
     .l2 {
         border-top: 2px solid rgba(128, 128, 128, 0.3);
         display: flex;
+        background-color: var(--my-color-2);
 
         a {
             width: fit-content;
+            color: white;
         }
 
         .menu-toggle-open {
@@ -172,6 +161,10 @@ select:focus {
             svg {
                 height: 40px;
                 width: 40px;
+
+                * {
+                    color: white;
+                }
             }
         }
 
@@ -186,12 +179,16 @@ select:focus {
                 width: fit-content;
                 display: flex;
                 justify-content: center;
-                margin: 5px;
+                // margin: 5px;
+                padding: 0px 20px ;
+                border-radius: 5px;
                 text-wrap: nowrap;
 
 
                 &:hover {
-                    color: var(--my-color);
+                    background-color: var(--my-color);
+                    // border-bottom: 5px solid black;
+                    color: white;
                 }
             }
         }

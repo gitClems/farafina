@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import './css/fadItem.scss'
 
-
-
 const FadItem = () => {
+
     var index = 0;
     useEffect(() => {
         showDivs(index);
@@ -16,7 +15,7 @@ const FadItem = () => {
 
 
     function showDivs() {
-        var imgs = document.getElementsByClassName('mySlides')
+        var imgs = document.querySelectorAll('#fad > .mySlides')
         var i;
         if (index + 1 > imgs.length) {
             index = 0
@@ -29,7 +28,7 @@ const FadItem = () => {
 
     setInterval(() => {
         plusDivs()
-    }, 3000);
+    }, 2000);
 
     return (
         <div id="fad">
