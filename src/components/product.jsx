@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './css/product.scss'
-import {products} from "../data/products"
+import { products } from "../data/products"
 
 const Product = (props) => {
     return (
@@ -8,9 +8,17 @@ const Product = (props) => {
             <div className='image'>
                 <img src={props.data.image} alt="..." /> <br />
             </div>
+            <span>{props.data.name}</span>
             <div>
-                <p>{props.data.id} - {props.data.name}</p>
-                <span>{props.data.price}$</span>
+                {
+                    props.data.promo ?
+                        <>
+                            <span>{props.data.promo}$</span> <br />
+                            <span style={{ textDecoration: 'line-through', color: 'grey' }}>{props.data.price}$</span>
+                        </>
+                        :
+                        <span>{props.data.price}$</span>
+                }
             </div>
         </Link>
     )
@@ -23,28 +31,28 @@ function DisplayProduct() {
             {
                 products.map((product) => {
                     return (
-                        <Product key = {product.id} data = {product}></Product>
+                        <Product key={product.id} data={product}></Product>
                     )
                 })
             }
             {
                 products.map((product) => {
                     return (
-                        <Product data = {product}></Product>
+                        <Product data={product}></Product>
                     )
                 })
             }
             {
                 products.map((product) => {
                     return (
-                        <Product data = {product}></Product>
+                        <Product data={product}></Product>
                     )
                 })
             }
             {
                 products.map((product) => {
                     return (
-                        <Product data = {product}></Product>
+                        <Product data={product}></Product>
                     )
                 })
             }

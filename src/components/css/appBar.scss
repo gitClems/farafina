@@ -31,9 +31,9 @@ select:focus {
 }
 
 #app-bar {
-    background-color: var(--primary);
     z-index: 100;
     box-shadow: 0px 0px 5px grey;
+    margin-bottom: 20px;
 
     a {
         text-decoration: none;
@@ -46,26 +46,32 @@ select:focus {
         max-width: 700px;
 
         select {
-            //outline: 3px solid grey;
-            // background-color: rgba(128, 128, 128, 0.2);
+            background-color: var(--primary);
+            color: white;
             border-radius: 5px 0px 0px 5px;
             border: none;
             padding-left: 10px;
 
             option {
+                color: black;
                 background-color: white;
             }
         }
 
 
         button {
-            //outline: 3px solid var(--my-color-2 );
             border-radius: 0px 5px 5px 0px;
             width: 50px;
             height: 100%;
             border: none;
             cursor: pointer;
-            // background-color: var(--my-color);
+            background-color: var(--primary);
+
+            svg {
+                * {
+                    color: white;
+                }
+            }
 
             &:hover {
                 box-shadow: 0px 0px 5px grey;
@@ -77,8 +83,9 @@ select:focus {
         input {
             padding-left: 10px;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.2);
-            color: white;
+            // background-color: rgba(201, 201, 201, 0.826);
+            background-color: white;
+            color: black;
         }
     }
 
@@ -113,19 +120,18 @@ select:focus {
         .shopping-cart,
         .connexion {
             border-radius: 5px;
-            background-color: white;
             cursor: pointer;
-            color: black;
             transition: 0.2s;
 
-            &:hover {
-                border-radius: 5px;
-                background-color: var(--my-color-2);
-                transition: 0.2s;
+            background-color: var(--primary);
 
-                * {
-                    color: white;
-                }
+            * {
+                color: white;
+            }
+
+            &:hover {
+                transition: 0.2s;
+                box-shadow: 0px 0px 10px white;
             }
 
             svg {
@@ -141,13 +147,15 @@ select:focus {
         width: 100%;
         display: none;
         padding: 10px;
-        border-top: 2px solid rgba(128, 128, 128, 0.3);
+        border-top: 2px solid rgb(255, 255, 255, 0.5);
+        background-color: var(--my-color-2);
     }
 
     .l2 {
-        border-top: 2px solid rgba(128, 128, 128, 0.3);
+        border-top: 2px solid rgb(255, 255, 255, 0.5);
         display: flex;
         background-color: var(--my-color-2);
+        height: 40px;
 
         a {
             width: fit-content;
@@ -171,24 +179,23 @@ select:focus {
         .category-list {
 
             display: flex;
+            align-items: center;
             overflow-y: hidden;
             width: fit-content;
 
             .category {
-                margin-left: 10px;
                 width: fit-content;
                 display: flex;
                 justify-content: center;
-                // margin: 5px;
-                padding: 0px 20px ;
-                border-radius: 5px;
+                margin: 5px;
+                padding: 0px 5px;
                 text-wrap: nowrap;
-
+                transition: 0.1s;
 
                 &:hover {
-                    background-color: var(--my-color);
-                    // border-bottom: 5px solid black;
-                    color: white;
+                    transition: 0.1s;
+                    color: var(--primary);
+                    outline: 5px solid var(--primary);
                 }
             }
         }

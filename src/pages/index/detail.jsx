@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { products } from "../../data/products"
 import Page404 from "./page404";
+import Button from "../../components/button"
 import '../css/detail.scss'
 
 const Detail = () => {
@@ -17,8 +18,26 @@ const Detail = () => {
                                 <div className="image">
                                     <img src={selectedItem.image} alt="..." />
                                 </div>
-                                <span>{selectedItem.name}</span>
-                                <span>{selectedItem.price}$</span>
+                                <div style={{ padding: 10 }}>
+                                    <div>
+
+                                        <span>{selectedItem.name}</span> <br />
+                                        {
+                                            selectedItem.promo ?
+                                                <div>
+                                                    <span >{selectedItem.promo}$</span> <br />
+                                                    <span style={{ textDecoration: 'line-through', color: 'grey' }}>{selectedItem.price}$</span>
+                                                </div>
+                                                :
+                                                <>
+                                                    <span>{selectedItem.price}$</span><br />
+                                                </>
+                                        }
+                                    </div>
+                                    <div style={{ width: "100%" }}>
+                                        <Button title={"Buy"}></Button>
+                                    </div>
+                                </div>
                             </div>
                             <div className="col-2">
                                 <h3>Description</h3>

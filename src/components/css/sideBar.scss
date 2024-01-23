@@ -14,10 +14,9 @@
         min-width: 250px;
         display: flex;
         flex-direction: column;
-        
+
         .profile {
 
-            // margin-top: 20px;
             * {
                 color: white;
             }
@@ -34,11 +33,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: var(--my-color);
+                background-color: var(--primary);
                 border-radius: 50%;
                 color: white;
             }
-
         }
     }
 
