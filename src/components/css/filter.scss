@@ -1,0 +1,30 @@
+.items-filter {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    margin-top: 40px;
+    max-width: 200px;
+    // min-height: 200px;
+    width: max-content;
+    height: max-content;
+
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
+
+    .filter-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
+
+        .filter-item {
+            text-wrap: nowrap;
+            border: 1px solid grey;
+            margin: 5px;
+            padding: 0px 5px 0px 5px;
+            border-radius: 5px;
+        }
+    }
+}

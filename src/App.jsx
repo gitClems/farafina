@@ -4,6 +4,7 @@ import AppBar from './components/appBar';
 import Home from './pages/index/home';
 import Detail from './pages/index/detail';
 import Page404 from './pages/index/page404'
+import CategoryPage from './pages/index/categoryItems';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path='/' index element={<Home />} />
             <Route path='/produit/:id' element={<Detail />} />
+            <Route path='/category/:id' element={<CategoryPage />} />
             <Route path='/*' element={<Page404 />} />
           </Routes>
         </div>

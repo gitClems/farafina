@@ -1,6 +1,5 @@
 #home-page {
-    padding: 0px 10px 0px 10px;
-    // background: url('../../assets/backgrounds/back-2.jpg');
+    padding: 20px 10px 0px 10px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -9,36 +8,45 @@
 
     .sec1 {
         padding: 20px;
-        // display: flex;
         height: max-content;
         border-radius: 10px;
         margin-bottom: 10px;
         background: url('../../assets/backgrounds/back.jpeg');
         background-position: center;
-        // box-shadow: 0px 0px 15px black;
+        box-shadow: 0px 0px 15px black;
 
-        .caroussel {
-            width: 600px;
-            // margin-left: 50px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0px 0px 15px black;
+        .carous-video {
+            display: flex;
+            justify-content: space-around;
 
-            img {
-                width: 100%;
-                height: 100%;
+            .caroussel {
+                width: 600px;
+                border-radius: 20px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
+    }
+
+    .sec2 {
+        margin-top: 20px;
+        display: flex;
     }
 }
 
 @media screen and (max-width: 700px) {
     #home-page {
-        padding: 20px 10px;
+        padding: 0px;
 
         .sec1 {
             padding: 10px 0px;
-            .caroussel {
+            border-radius: 0;
+
+            .carous-video {
                 display: none;
             }
         }

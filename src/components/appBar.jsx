@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./css/appBar.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
@@ -14,15 +14,30 @@ function AppBar() {
         sidebar.classList.add('active')
     }
 
+    window.addEventListener('scroll', function () {
+        const l1 = document.querySelector('.l1')
+        const l2 = document.querySelector('.l2')
+        const l3 = document.querySelector('.l2-min')
+        var rect = l1.getBoundingClientRect().bottom + l3?.getBoundingClientRect().bottom
+        l2.classList.toggle('sticky', rect < 0)
+    })
+
     return (
         <div id='app-bar'>
             <Sidebar />
             <ScrollUp />
             <div className='l1'>
-                <Link className='logo' to={"/"}>
-                    Farafina
-                </Link>
-                <div className='search-bar' >
+                <div style={{ display: 'flex' }}>
+                    <div className='menu-toggle-open' onClick={openMenu}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </div>
+                    <Link className='logo' to={"/"}>
+                        Farafina
+                    </Link>
+                </div>
+                <form className='search-bar' >
                     <select name="" id="">
                         <option value="">All</option>
                         <option value="">Cat 1</option>
@@ -31,7 +46,7 @@ function AppBar() {
                     </select>
                     <input type="search" placeholder={`Rechercher un article`} />
                     <button><FontAwesomeIcon icon={faSearch}></FontAwesomeIcon></button>
-                </div>
+                </form>
 
                 <div style={{ display: "flex" }}>
 
@@ -48,7 +63,7 @@ function AppBar() {
             </div>
 
 
-            <div className='l2-min'>
+            <form className='l2-min'>
                 <div className='search-bar' >
                     <select name="" id="">
                         <option value="">All</option>
@@ -59,24 +74,24 @@ function AppBar() {
                     <input type="search" placeholder={`Rechercher un article`} />
                     <button><FontAwesomeIcon icon={faSearch}></FontAwesomeIcon></button>
                 </div>
-            </div>
+            </form>
             <div className='l2'>
                 <div className='menu-toggle-open' onClick={openMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                     </svg>
                 </div>
-                <div className='category-list'>
-                    <span><Link className='category active'>Accueil</Link></span>
-                    <span><Link className='category'>Category h</Link></span>
-                    <span><Link className='category'>Category g</Link></span>
-                    <span><Link className='category'>Category r</Link></span>
-                    <span><Link className='category'>Category e</Link></span>
-                    <span><Link className='category'>Category r</Link></span>
-                    <span><Link className='category'>Category j</Link></span>
-                    <span><Link className='category'>Category d</Link></span>
-                    <span><Link className='category'>Category m</Link></span>
-                </div>
+                <nav className='category-list'>
+                    <NavLink to={'/'} className='category' >Accueil</NavLink>
+                    <NavLink to={'/category/Category-1'} className='category'>Category 1</NavLink>
+                    <NavLink to={'/category/Category-2'} className='category'>Category 2</NavLink>
+                    <NavLink to={'/category/Category-3'} className='category'>Category 3</NavLink>
+                    <NavLink to={'/category/Category-4'} className='category'>Category 4</NavLink>
+                    <NavLink to={'/category/Category-5'} className='category'>Category 5</NavLink>
+                    <NavLink to={'/category/Category-6'} className='category'>Category 6</NavLink>
+                    <NavLink to={'/category/Category-7'} className='category'>Category 7</NavLink>
+                    <NavLink to={'/category/Category-8'} className='category'>Category 8</NavLink>
+                </nav>
             </div>
         </div>
     )

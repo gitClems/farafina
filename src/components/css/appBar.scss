@@ -1,39 +1,6 @@
-input[type="text"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="time"],
-input[type="url"],
-textarea,
-select {
-    font-size: 17px;
-    outline: none;
-    border: 1px solid #ccc;
-    color: black;
-    transition: 0.2s all ease-in-out;
-}
-
-input[type="text"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-textarea:focus,
-select:focus {
-    transition: 0.2s all ease-in-out;
-    box-shadow: 0 0 5px grey;
-    border: 1px solid rgba(128, 128, 128, 0.5);
-}
-
 #app-bar {
     z-index: 100;
     box-shadow: 0px 0px 5px grey;
-    margin-bottom: 20px;
 
     a {
         text-decoration: none;
@@ -83,7 +50,6 @@ select:focus {
         input {
             padding-left: 10px;
             width: 100%;
-            // background-color: rgba(201, 201, 201, 0.826);
             background-color: white;
             color: black;
         }
@@ -94,13 +60,30 @@ select:focus {
         padding: 0px 10px;
         display: flex;
         flex: none;
-        position: static;
         justify-content: space-between;
         align-items: center;
         height: 60px;
 
         a {
             color: white;
+        }
+
+        .menu-toggle-open {
+            display: none;
+            cursor: pointer;
+
+            @media screen and (max-width: 700px) {
+                display: block;
+            }
+
+            svg {
+                height: 40px;
+                width: 40px;
+
+                * {
+                    color: white;
+                }
+            }
         }
 
         .logo,
@@ -151,11 +134,21 @@ select:focus {
         background-color: var(--my-color-2);
     }
 
+    .l2.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 0px 0px 15px black;
+    }
+
     .l2 {
         border-top: 2px solid rgb(255, 255, 255, 0.5);
         display: flex;
         background-color: var(--my-color-2);
         height: 40px;
+        width: 100%;
+        z-index: 10;
+        position: sticky;
 
         a {
             width: fit-content;
@@ -165,6 +158,10 @@ select:focus {
         .menu-toggle-open {
             cursor: pointer;
             margin-left: 20px;
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
 
             svg {
                 height: 40px;
@@ -179,25 +176,34 @@ select:focus {
         .category-list {
 
             display: flex;
-            align-items: center;
             overflow-y: hidden;
             width: fit-content;
+
+
+            .active {
+                background-color: var(--primary);
+                color: black !important;
+            }
 
             .category {
                 width: fit-content;
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 margin: 5px;
+                border-radius: 10px;
                 padding: 0px 5px;
                 text-wrap: nowrap;
-                transition: 0.1s;
+                border: none;
+                outline: 3px solid var(--primary);
+                color: white;
 
                 &:hover {
-                    transition: 0.1s;
-                    color: var(--primary);
-                    outline: 5px solid var(--primary);
+                    border: none;
                 }
+
             }
+
         }
 
     }
@@ -230,4 +236,57 @@ select:focus {
         }
     }
 
+}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    font-size: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    color: black;
+    transition: 0.2s all ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+    transition: 0.2s all ease-in-out;
+    box-shadow: 0 0 5px grey;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background-color: white;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(210, 210, 210);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(61, 61, 61);
 }
