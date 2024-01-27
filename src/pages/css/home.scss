@@ -6,6 +6,14 @@
     background-size: cover;
     min-height: 100vh;
 
+    
+    /* Safari */
+    -webkit-user-select: none;
+    /* IE 10 and IE 11 */
+    -ms-user-select: none;
+    /* Standard syntax */
+    user-select: none;
+
     .sec1 {
         padding: 20px;
         height: max-content;
@@ -35,6 +43,7 @@
     .sec2 {
         margin-top: 20px;
         display: flex;
+        justify-content: center;
     }
 }
 

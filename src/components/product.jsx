@@ -56,6 +56,20 @@ function DisplayProduct() {
                     )
                 })
             }
+            {
+                products.map((product) => {
+                    return (
+                        <Product data={product}></Product>
+                    )
+                })
+            }
+            {
+                products.map((product) => {
+                    return (
+                        <Product data={product}></Product>
+                    )
+                })
+            }
         </div>
     )
 }

@@ -16,17 +16,14 @@ function Home() {
                     <aside className='caroussel'>
                         <MyCarousel></MyCarousel>
                     </aside>
-                    {/* <video width="320" height="100%" controls autoPlay loop>
-                        <source src={require("../../assets/video/video1.mp4")} type="video/mp4" />
-                    </video> */}
                 </div>
             </section>
             <section>
                 <HorizontalItems></HorizontalItems>
             </section>
             <section className='sec2'>
-                <Filter></Filter>
                 <DisplayProduct></DisplayProduct>
+                <Filter></Filter>
             </section>
 
         </div>
