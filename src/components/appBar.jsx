@@ -84,13 +84,15 @@ function AppBar() {
                 <nav className='category-list'>
                     <NavLink to={'/'} className='category' >Accueil</NavLink>
                     <NavLink to={'/category/Category-1'} className='category'>Category 1</NavLink>
-                    <NavLink to={'/category/Category-2'} className='category'>Category 2</NavLink>
-                    <NavLink to={'/category/Category-3'} className='category'>Category 3</NavLink>
-                    <NavLink to={'/category/Category-4'} className='category'>Category 4</NavLink>
-                    <NavLink to={'/category/Category-5'} className='category'>Category 5</NavLink>
-                    <NavLink to={'/category/Category-6'} className='category'>Category 6</NavLink>
-                    <NavLink to={'/category/Category-7'} className='category'>Category 7</NavLink>
-                    <NavLink to={'/category/Category-8'} className='category'>Category 8</NavLink>
+                    <NavLink to={'/category/Category-2'} className='category'>Category fez</NavLink>
+                    <NavLink to={'/category/Category-3'} className='category'>Category vhjede</NavLink>
+                    <NavLink to={'/category/Category-4'} className='category'>Category uyhjce</NavLink>
+                    <NavLink to={'/category/Category-5'} className='category'>Category il</NavLink>
+                    <NavLink to={'/category/Category-6'} className='category'>Category</NavLink>
+                    <NavLink to={'/category/Category-7'} className='category'>Category yuhjnjec r</NavLink>
+                    <NavLink to={'/category/Category-8'} className='category'>Category edce</NavLink>
+                    <NavLink to={'/category/Category-9'} className='category'>Category tjyuyu</NavLink>
+                    <NavLink to={'/category/Category-10'} className='category'>Category ghhghu</NavLink>
                 </nav>
             </div>
         </div>

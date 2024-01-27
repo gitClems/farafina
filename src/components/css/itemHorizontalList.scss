@@ -1,7 +1,6 @@
 #horizontalItems {
     display: flex;
     align-items: center;
-    background-color: rgba(150, 150, 150, 0.1);
 
     @media screen and (max-width: 700px) {
         margin: 0 10px;

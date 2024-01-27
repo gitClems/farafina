@@ -186,24 +186,17 @@
             }
 
             .category {
-                width: fit-content;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: max-content;
+                height: max-content;
                 margin: 5px;
                 border-radius: 10px;
                 padding: 0px 5px;
-                text-wrap: nowrap;
-                border: none;
                 outline: 3px solid var(--primary-2);
                 color: white;
                 white-space: nowrap;
-
-                &:hover {
-                    border: none;
-                    background-color: var(--primary-2);
-                    color: black;
-                }
             }
         }
     }
@@ -236,7 +229,7 @@
         }
 
         .l2 {
-            height: 32px;
+            // height: 32px;
 
             .category-list {
                 &::-webkit-scrollbar {
