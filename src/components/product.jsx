@@ -8,17 +8,19 @@ const Product = (props) => {
             <div className='image'>
                 <img src={props.data.image} alt="..." /> <br />
             </div>
-            <span>{props.data.name}</span>
-            <div>
-                {
-                    props.data.promo ?
-                        <>
-                            <span>{props.data.promo}$</span> <br />
-                            <span style={{ textDecoration: 'line-through', color: 'grey' }}>{props.data.price}$</span>
-                        </>
-                        :
-                        <span>{props.data.price}$</span>
-                }
+            <div className='d-flex flex-col align-items-center'>
+                <span>{props.data.name}</span>
+                <div>
+                    {
+                        props.data.promo ?
+                            <div>
+                                <span className='text-gray-500 line-through'>{props.data.price}$</span>
+                                <span className='ml-[10px]'>{props.data.promo}$</span>
+                            </div>
+                            :
+                            <span>{props.data.price}$</span>
+                    }
+                </div>
             </div>
         </Link>
     )
@@ -27,50 +29,52 @@ const Product = (props) => {
 function DisplayProduct() {
 
     return (
-        <div id='produts'>
-            {
-                products.map((product) => {
-                    return (
-                        <Product key={product.id} data={product}></Product>
-                    )
-                })
-            }
-            {
-                products.map((product) => {
-                    return (
-                        <Product data={product}></Product>
-                    )
-                })
-            }
-            {
-                products.map((product) => {
-                    return (
-                        <Product data={product}></Product>
-                    )
-                })
-            }
-            {
-                products.map((product) => {
-                    return (
-                        <Product data={product}></Product>
-                    )
-                })
-            }
-            {
-                products.map((product) => {
-                    return (
-                        <Product data={product}></Product>
-                    )
-                })
-            }
-            {
-                products.map((product) => {
-                    return (
-                        <Product data={product}></Product>
-                    )
-                })
-            }
-        </div>
+        <>
+            <div id='produts'>
+                {
+                    products.map((product) => {
+                        return (
+                            <Product key={product.id} data={product}></Product>
+                        )
+                    })
+                }
+                {
+                    products.map((product) => {
+                        return (
+                            <Product data={product}></Product>
+                        )
+                    })
+                }
+                {
+                    products.map((product) => {
+                        return (
+                            <Product data={product}></Product>
+                        )
+                    })
+                }
+                {
+                    products.map((product) => {
+                        return (
+                            <Product data={product}></Product>
+                        )
+                    })
+                }
+                {
+                    products.map((product) => {
+                        return (
+                            <Product data={product}></Product>
+                        )
+                    })
+                }
+                {
+                    products.map((product) => {
+                        return (
+                            <Product data={product}></Product>
+                        )
+                    })
+                }
+            </div>
+        </>
     )
 }
 

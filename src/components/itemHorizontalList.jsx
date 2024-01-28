@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import './css/itemHorizontalList.scss'
 import { ChevronCompactLeft, ChevronCompactRight } from 'react-bootstrap-icons'
+import { useEffect } from 'react'
 
-const HorizontalItems = () => {
+const HorizontalItems = (props) => {
 
     const slideLeft = () => {
         const slider = document.querySelector('#horizontalItems > .slider')
@@ -13,11 +14,18 @@ const HorizontalItems = () => {
         slider.scrollLeft = slider.scrollLeft + 110
     }
 
+    useEffect(() => {
+        const items = document.querySelectorAll('.slider > .category')
+        items.forEach(element => {
+            element.style.borderRadius = props.borderRadius
+        });
+    })
+
     return (
         <div id="horizontalItems">
             <ChevronCompactLeft className='icon' onClick={slideLeft} size={'40px'} />
             <div className='slider'>
-                <Link to={'/category/classement-1'} className='category inline-block easy-in-out duration-300'>
+                <Link to={'/category/classement-1'} className='category'>
                     <img src={require('../assets/images/Page1.png')} alt="" />
                 </Link>
                 <Link to={'/category/classement-2'} className='category'>

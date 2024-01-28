@@ -1,25 +1,17 @@
 import '../css/home.scss'
-import MyCarousel from '../../components/carousel'
 import DisplayProduct from '../../components/product'
-import AutoplayCarrous from '../../components/autoplayCarous'
 import HorizontalItems from '../../components/itemHorizontalList'
 import Filter from '../../components/filter'
+import Baniere from '../../components/banniere'
 
 function Home() {
     return (
         <div id='home-page'>
             <section className='sec1'>
-                <aside className='slides'>
-                    <AutoplayCarrous></AutoplayCarrous>
-                </aside>
-                <div className='carous-video'>
-                    <aside className='caroussel'>
-                        <MyCarousel></MyCarousel>
-                    </aside>
-                </div>
+                <Baniere></Baniere>
             </section>
             <section>
-                <HorizontalItems></HorizontalItems>
+                <HorizontalItems borderRadius = {'50px'}/>
             </section>
             <section className='sec2'>
                 <DisplayProduct></DisplayProduct>

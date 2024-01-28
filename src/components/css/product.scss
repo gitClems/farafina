@@ -25,9 +25,8 @@
     .product-item {
         text-decoration: none;
         color: black;
-        margin: 5px;
+        margin: 2px;
         padding: 5px;
-        // cursor: pointer;
         transition: 0.2s all ease-in-out;
         overflow: hidden;
         border-radius: 10px;
@@ -35,8 +34,7 @@
 
         .image {
             height: 200px;
-            border-radius: 10px;
-            background-color: rgba(128, 128, 128, 0.2);
+            overflow: hidden;
 
             img {
                 border-radius: 15px;

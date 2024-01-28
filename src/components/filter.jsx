@@ -1,12 +1,15 @@
+import { useEffect } from 'react'
 import './css/filter.scss'
 
 const Filter = () => {
+    useEffect(() => {
+
+    })
+
     return (
-        <div className="items-filter">
+        <div id="items-filter">
             <span>Filter</span>
             <div className="filter-list">
-
-
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter 1</span>
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter edxt</span>
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter grezs</span>
@@ -20,7 +23,7 @@ const Filter = () => {
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter zddtr</span>
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter -èjèhygt</span>
             </div>
-        </div>
+        </div >
     )
 }
 
