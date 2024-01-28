@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/farafina/static/css/main.11096edd.css",
-    "main.js": "/farafina/static/js/main.34094253.js",
+    "main.css": "/farafina/static/css/main.687f4bee.css",
+    "main.js": "/farafina/static/js/main.472510a2.js",
     "static/media/Page2.png": "/farafina/static/media/Page2.c6f345b6e25e858998a9.png",
     "static/media/Page3.png": "/farafina/static/media/Page3.13a3e552e904c69834ea.png",
     "static/media/profile.png": "/farafina/static/media/profile.4358644ff2f75af86fb9.png",
@@ -9,11 +9,11 @@
     "static/media/profile-1.png": "/farafina/static/media/profile-1.5686cb3c393b2f19853b.png",
     "static/media/Page1.png": "/farafina/static/media/Page1.1a85563a2aa94ae61816.png",
     "index.html": "/farafina/index.html",
-    "main.11096edd.css.map": "/farafina/static/css/main.11096edd.css.map",
-    "main.34094253.js.map": "/farafina/static/js/main.34094253.js.map"
+    "main.687f4bee.css.map": "/farafina/static/css/main.687f4bee.css.map",
+    "main.472510a2.js.map": "/farafina/static/js/main.472510a2.js.map"
   },
   "entrypoints": [
-    "static/css/main.11096edd.css",
-    "static/js/main.34094253.js"
+    "static/css/main.687f4bee.css",
+    "static/js/main.472510a2.js"
   ]
 }
