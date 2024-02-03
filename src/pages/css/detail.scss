@@ -5,12 +5,10 @@
         flex-wrap: wrap;
         padding-left: 50px;
         padding-right: 50px;
-        // background-color: red;
         margin-bottom: 70px;
         width: 100%;
 
         .col-1 {
-            // border: 2px solid red;
             border-radius: 20px;
             width: max-content;
 
@@ -25,7 +23,6 @@
                 padding-top: 20px;
                 display: flex;
                 justify-content: center;
-                // background-color: red;
 
                 img {
                     width: 300px;
@@ -52,12 +49,11 @@
 
         .col-2 {
             flex: 1;
-            // width: 100;
             min-width: 500px;
             border: 2px solid grey;
             border-radius: 20px;
             padding: 20px;
-            margin: 20px;
+            margin-top: 20px;
         }
     }
 }
@@ -72,10 +68,8 @@
             .col-1 {
                 width: 100%;
                 padding: 0;
-                // display: flex;
             }
             .col-2 {
-                // margin-top: 20px;
                 min-width: 100%;
             }
         }

@@ -3,7 +3,7 @@ import "../css/categoryItems.scss"
 const CategoryPage = () => {
     const param = useParams()
     return (
-        <div>
+        <div className="page">
             <h1>{param.id}</h1>
         </div>
     )

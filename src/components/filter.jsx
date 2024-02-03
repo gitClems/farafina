@@ -3,16 +3,11 @@ import './css/filter.scss'
 
 const Filter = () => {
 
-    const [filterPrice, setFilterPrice] = useState(10)
-
-    useEffect(() => {
-        FilterPrice()
-    })
+    const [filterPrice, setFilterPrice] = useState(999999)
 
     const FilterPrice = () => {
         const price = document.querySelector('#filter-price')
         setFilterPrice(price.value)
-        console.log(filterPrice);
     }
 
     return (
@@ -23,7 +18,7 @@ const Filter = () => {
                     <span>$10</span>
                     <span>${filterPrice}</span>
                 </div>
-                <input className="mb-[10px] h-[2px]" onChange={FilterPrice} type="range" name='price' id='filter-price' max={999999} min={10} step={1} width={'100%'} />
+                <input className="mb-[10px] h-[2px]" onChange={FilterPrice} type="range" name='price' id='filter-price' value={filterPrice} max={999999} min={10} step={1} width={'100%'} />
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter edxt</span>
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter grezs</span>
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter wzx</span>
