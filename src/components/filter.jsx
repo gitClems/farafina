@@ -1,16 +1,29 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './css/filter.scss'
 
 const Filter = () => {
-    useEffect(() => {
 
+    const [filterPrice, setFilterPrice] = useState(10)
+
+    useEffect(() => {
+        FilterPrice()
     })
+
+    const FilterPrice = () => {
+        const price = document.querySelector('#filter-price')
+        setFilterPrice(price.value)
+        console.log(filterPrice);
+    }
 
     return (
         <div id="items-filter">
             <span>Filter</span>
             <div className="filter-list">
-                <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter 1</span>
+                <div className='d-flex align-items-center justify-content-between w-[100%]'>
+                    <span>$10</span>
+                    <span>${filterPrice}</span>
+                </div>
+                <input className="mb-[10px] h-[2px]" onChange={FilterPrice} type="range" name='price' id='filter-price' max={999999} min={10} step={1} width={'100%'} />
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter edxt</span>
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter grezs</span>
                 <span className='filter-item'><input type="checkbox" name="filter" id="" /> Filter wzx</span>

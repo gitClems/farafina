@@ -5,6 +5,7 @@ import Home from './pages/index/home';
 import Detail from './pages/index/detail';
 import Page404 from './pages/index/page404'
 import CategoryPage from './pages/index/categoryItems';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='/category/:id' element={<CategoryPage />} />
             <Route path='/*' element={<Page404 />} />
           </Routes>
+          <Footer />
         </div>
       </body>
     </html>

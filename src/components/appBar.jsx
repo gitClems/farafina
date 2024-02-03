@@ -20,6 +20,14 @@ function AppBar() {
         const l3 = document.querySelector('.l2-min')
         var rect = l1.getBoundingClientRect().bottom + l3?.getBoundingClientRect().bottom
         l2.classList.toggle('sticky', rect < 0)
+
+        if(rect < 0) {
+            document.querySelector(".page").style.paddingTop = `${l2.offsetHeight + 10}px`
+        }else {
+            document.querySelector(".page").style.paddingTop = '10px'
+        }
+            
+
     })
 
     return (

@@ -1,21 +1,23 @@
 export const products = [
     {
-        id : '1',
-        name: 'Product 1',
-        description : 'description produit 1',
+        id : 'rtvgdfrcred',
+        name: 'Product jh kjedjh efydfrrghy',
+        description : 'rvrscrsejhjjlr jlerkh nlikjkev kjnoliolzek lkhezf ulbjn ouhkje, khnzleilj,lekn kjhk,eol hbkn jkhnzeklkhn iuk',
         price: 219,
         promo: 199,
         image: require('../assets/profiles/profile.png')
     },
     {
-        id : '2',
-        name: 'Product 2',
+        id : 'rfdekrczerc',
+        name: 'Product edcyjghh ef iueckfhkvr',
+        description : 'rvrscrsejhjjlr jlerkh nlikjkev kjnoliolzek lkhezf ulbjn ouhkje, khnzleilj,lekn kjhk,eol hbkn jkhnzeklkhn iuk',
         price: 59,
         image: require('../assets/profiles/profile-3.jpg')
     },
     {
-        id : '3',
-        name: 'Product 3',
+        id : 'rftybvcez',
+        name: 'Product hgvhbec kjheb',
+        description : 'rvrscrsejhjjlr jlerkh nlikjkev kjnoliolzek lkhezf ulbjn ouhkje, khnzleilj,lekn kjhk,eol hbkn jkhnzeklkhn iuk',
         price: 450,
         image: require('../assets/profiles/profile-1.png')
     },

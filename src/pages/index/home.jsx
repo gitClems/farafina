@@ -6,12 +6,12 @@ import Baniere from '../../components/banniere'
 
 function Home() {
     return (
-        <div id='home-page'>
+        <div id='home-page' className="page">
             <section className='sec1'>
                 <Baniere></Baniere>
             </section>
             <section>
-                <HorizontalItems borderRadius = {'50px'}/>
+                <HorizontalItems borderRadius = {'50%'}/>
             </section>
             <section className='sec2'>
                 <DisplayProduct></DisplayProduct>

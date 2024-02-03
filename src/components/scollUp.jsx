@@ -1,5 +1,8 @@
 import './css/scrollUp.scss'
 
+export const getToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+}
 
 function ScrollUp() {
 
