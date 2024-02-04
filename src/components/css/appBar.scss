@@ -68,10 +68,6 @@
         align-items: center;
         height: 60px;
 
-        a {
-            color: white;
-        }
-
         .menu-toggle-open {
             display: none;
             cursor: pointer;
@@ -83,10 +79,6 @@
             svg {
                 height: 40px;
                 width: 40px;
-
-                // * {
-                //     color: var(--text-color-white);
-                // }
             }
         }
 
@@ -102,8 +94,6 @@
         .logo {
             transition: 0.2s;
             font-size: 30px;
-            // background-color: var(--primary);
-            // border-radius: 5px;
             color: var(--text-color-white);
         }
 
@@ -172,10 +162,6 @@
             svg {
                 height: 40px;
                 width: 40px;
-
-                * {
-                    color: white;
-                }
             }
         }
 

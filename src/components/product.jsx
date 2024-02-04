@@ -5,7 +5,9 @@ import { getToTop } from './scollUp'
 
 const Product = (props) => {
     return (
-        <Link className="product-item" key={props.data.id} to={`/produit/${props.data.id}`} onClick={getToTop}>
+        <Link className="product-item" key={props.data.id} to={`/produit/${props.data.id}`} 
+        onClick={getToTop}
+        >
             <div className='image'>
                 <img src={props.data.image} alt="..." /> <br />
             </div>

@@ -79,6 +79,9 @@ const Detail = () => {
                             </div>
                         </div>
                         <div className="l-2">
+                            <div>
+                                <h2>Des produits qui pourraient vous interesser</h2>
+                            </div>
                             <DisplayProduct></DisplayProduct>
                         </div>
                     </>
