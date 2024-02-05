@@ -23,7 +23,9 @@ const HorizontalItems = (props) => {
 
     return (
         <div id="horizontalItems">
-            <ChevronCompactLeft className='icon' onClick={slideLeft} size={'40px'} />
+            <div onClick={slideLeft} className='icon h-[100%] d-flex align-items-center'>
+                <ChevronCompactLeft size={'40px'} />
+            </div>
             <div className='slider'>
                 <Link to={'/category/classement-1'} className='category'>
                     <img src={require('../assets/images/Page1.png')} alt="" />
@@ -77,7 +79,9 @@ const HorizontalItems = (props) => {
                     <img src={require('../assets/images/Page2.png')} alt="" />
                 </Link>
             </div>
-            <ChevronCompactRight className='icon' onClick={slideRight} size={'40px'} />
+            <div onClick={slideRight} className='icon h-[100%] d-flex align-items-center'>
+                <ChevronCompactRight size={'40px'} />
+            </div>
         </div>
     )
 }

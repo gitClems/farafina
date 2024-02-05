@@ -6,6 +6,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Sidebar from './sidebar';
 import ScrollUp from './scollUp';
+import { ChevronCompactLeft, ChevronCompactRight } from 'react-bootstrap-icons'
 
 
 function AppBar() {
@@ -27,8 +28,17 @@ function AppBar() {
             document.querySelector(".page").style.paddingTop = '10px'
         }
 
-
     })
+
+
+    const slideLeft = () => {
+        const slider = document.querySelector('.category-list > .category-list-slider')
+        slider.scrollLeft = slider.scrollLeft - 110
+    }
+    const slideRight = () => {
+        const slider = document.querySelector('.category-list > .category-list-slider')
+        slider.scrollLeft = slider.scrollLeft + 110
+    }
 
     return (
         <div id='app-bar'>
@@ -69,8 +79,6 @@ function AppBar() {
                     </Link>
                 </div>
             </div>
-
-
             <form className='l2-min'>
                 <div className='search-bar' >
                     <select name="" id="">
@@ -89,18 +97,26 @@ function AppBar() {
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                     </svg>
                 </div>
-                <nav className='category-list'>
-                    <NavLink to={'/'} className='category' >Accueil</NavLink>
-                    <NavLink to={'/category/Category-1'} className='category'>Category 1</NavLink>
-                    <NavLink to={'/category/Category-2'} className='category'>Category fez</NavLink>
-                    <NavLink to={'/category/Category-3'} className='category'>Category vhjede</NavLink>
-                    <NavLink to={'/category/Category-4'} className='category'>Category uyhjce</NavLink>
-                    <NavLink to={'/category/Category-5'} className='category'>Category il</NavLink>
-                    <NavLink to={'/category/Category-6'} className='category'>Category</NavLink>
-                    <NavLink to={'/category/Category-7'} className='category'>Category yuhjnjec r</NavLink>
-                    <NavLink to={'/category/Category-8'} className='category'>Category edce</NavLink>
-                    <NavLink to={'/category/Category-9'} className='category'>Category tjyuyu</NavLink>
-                    <NavLink to={'/category/Category-10'} className='category'>Category ghhghu</NavLink>
+                <nav className='category-list d-flex align-items-center'>
+                    <div className='icon h-[100%] w-[100px]'>
+                        <ChevronCompactLeft className='cursor-pointer h-[100%]' color='white' onClick={slideLeft} size={'40px'} />
+                    </div>
+                    <div className='category-list-slider scroll-smooth'>
+                        <NavLink to={'/'} className='category' >Accueil</NavLink>
+                        <NavLink to={'/category/Category-1'} className='category'>Category 1</NavLink>
+                        <NavLink to={'/category/Category-2'} className='category'>Category fez</NavLink>
+                        <NavLink to={'/category/Category-3'} className='category'>Category vhjede</NavLink>
+                        <NavLink to={'/category/Category-4'} className='category'>Category uyhjce</NavLink>
+                        <NavLink to={'/category/Category-5'} className='category'>Category il</NavLink>
+                        <NavLink to={'/category/Category-6'} className='category'>Category</NavLink>
+                        <NavLink to={'/category/Category-7'} className='category'>Category yuhjnjec r</NavLink>
+                        <NavLink to={'/category/Category-8'} className='category'>Category edce</NavLink>
+                        <NavLink to={'/category/Category-9'} className='category'>Category tjyuyu</NavLink>
+                        <NavLink to={'/category/Category-10'} className='category'>Category ghhghu</NavLink>
+                    </div>
+                    <div className='icon h-[100%] w-[100px]'>
+                        <ChevronCompactRight className='cursor-pointer' color='white' onClick={slideRight} size={'40px'} />
+                    </div>
                 </nav>
             </div>
         </div>
