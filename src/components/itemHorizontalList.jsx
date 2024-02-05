@@ -23,7 +23,7 @@ const HorizontalItems = (props) => {
 
     return (
         <div id="horizontalItems">
-            <div onClick={slideLeft} className='icon h-[100%] d-flex align-items-center'>
+            <div onClick={slideLeft} className='icon h-[100%] align-items-center'>
                 <ChevronCompactLeft size={'40px'} />
             </div>
             <div className='slider'>
@@ -79,7 +79,7 @@ const HorizontalItems = (props) => {
                     <img src={require('../assets/images/Page2.png')} alt="" />
                 </Link>
             </div>
-            <div onClick={slideRight} className='icon h-[100%] d-flex align-items-center'>
+            <div onClick={slideRight} className='icon h-[100%] align-items-center'>
                 <ChevronCompactRight size={'40px'} />
             </div>
         </div>
