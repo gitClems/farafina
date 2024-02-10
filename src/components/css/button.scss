@@ -1,16 +1,12 @@
 .myButton {
     background: var(--primary);
     text-decoration: none;
-    // font-size: 25px;
     font-size: 3.5vmin;
-    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.2s;
-    color: white;
     padding: 0px 20px 0px 20px;
-
     
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -34,6 +30,6 @@
 
 @media screen and (max-width: 800px) {
     .myButton {
-        font-size: 20px;
+        font-size: 30px;
     }
 }

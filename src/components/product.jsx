@@ -5,8 +5,8 @@ import { getToTop } from './scollUp'
 
 const Product = (props) => {
     return (
-        <Link className="product-item" key={props.data.id} to={`/produit/${props.data.id}`} 
-        onClick={getToTop}
+        <Link className="product-item" key={props.data.id} to={`/produit/${props.data.id}`}
+            onClick={getToTop}
         >
             <div className='image'>
                 <img src={props.data.image} alt="..." /> <br />
@@ -29,18 +29,21 @@ const Product = (props) => {
     )
 }
 
-function DisplayProduct() {
+function DisplayProduct(props) {
+
+    var array = []
+    if (props.lenght) {
+        for (let index = 0; index < props.lenght; index++) {
+            array.push(products[index]);
+        }
+    } else {
+        array = products
+    }
 
     return (
         <>
             <div id='produts'>
-                {products.map((product) => { return (<Product data={product}></Product>) })}
-                {products.map((product) => { return (<Product data={product}></Product>) })}
-                {products.map((product) => { return (<Product data={product}></Product>) })}
-                {products.map((product) => { return (<Product data={product}></Product>) })}
-                {products.map((product) => { return (<Product data={product}></Product>) })}
-                {products.map((product) => { return (<Product data={product}></Product>) })}
-                {products.map((product) => { return (<Product data={product}></Product>) })}
+                {array.map((product) => { return (<Product data={product}></Product>) })}
             </div>
         </>
     )

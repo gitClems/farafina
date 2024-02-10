@@ -39,18 +39,19 @@ const Detail = () => {
                                         <h2 className="title">{selectedItem.name}</h2>
                                         {
                                             selectedItem.promo ?
-                                                <div>
+                                                <h4>
                                                     <span className="text-gray-400 line-through" >${selectedItem.price}</span>
                                                     <span className="ml-[10px]">${selectedItem.promo}</span>
-                                                </div>
+                                                </h4>
                                                 :
                                                 <>
-                                                    <span>${selectedItem.price}</span><br />
+                                                    <h4>${selectedItem.price}</h4>
                                                 </>
                                         }
                                     </div>
                                     <div style={{ width: "100%" }}>
                                         <div className="
+                                        align-items-center
                                             d-flex
                                             justify-content-end
                                             -webkit-user-select-none
@@ -66,7 +67,7 @@ const Detail = () => {
                                             </div>
                                         </div>
                                         <div className='mt-[10px]'>
-                                            <Button title={"Ajouter au panier"}></Button>
+                                            <Button radius = {50} title={"Ajouter au panier"}></Button>
                                         </div>
                                     </div>
                                 </div>
@@ -79,10 +80,8 @@ const Detail = () => {
                             </div>
                         </div>
                         <div className="l-2">
-                            <div>
-                                <h2>Des produits qui pourraient vous interesser</h2>
-                            </div>
-                            <DisplayProduct></DisplayProduct>
+                            <h2>Des produits qui pourraient vous interesser</h2>
+                            <DisplayProduct lenght={5}></DisplayProduct>
                         </div>
                     </>
                     : <Page404></Page404>
