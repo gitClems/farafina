@@ -2,26 +2,30 @@ import { Link } from 'react-router-dom'
 import './css/product.scss'
 import { products } from "../data/products"
 import { getToTop } from './scollUp'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../firebase'
+import { useEffect, useState } from 'react'
 
-const Product = (props) => {
+const Product = ({product}) => {
     return (
-        <Link className="product-item" key={props.data.id} to={`/produit/${props.data.id}`}
+        <Link className="product-item" key={product.id} to={`/produit/${product.id}`}
             onClick={getToTop}
         >
+             {/* <Link className="product-item" key={product.id} to={{ pathname: `/produit/${product.id}`, state: { data: product } }}> */}
             <div className='image'>
-                <img src={props.data.image} alt="..." /> <br />
+                <img src={product.image} alt="..." /> <br />
             </div>
             <div className='m-[10px]'>
-                <p className='overflow-hidden text-ellipsis text-nowrap'>{props.data.name}</p>
+                <p className='overflow-hidden text-ellipsis text-nowrap'>{product.name}</p>
                 <div>
                     {
-                        props.data.promo ?
+                        product.promo ?
                             <div>
-                                <span className='text-gray-500 line-through'>${props.data.price}</span>
-                                <span className='ml-[10px]'>${props.data.promo}</span>
+                                <span className='text-gray-500 line-through'>${product.price}</span>
+                                <span className='ml-[10px]'>${product.promo}</span>
                             </div>
                             :
-                            <span>${props.data.price}</span>
+                            <span>${product.price}</span>
                     }
                 </div>
             </div>
@@ -29,21 +33,30 @@ const Product = (props) => {
     )
 }
 
-function DisplayProduct(props) {
+function DisplayProduct() {
 
-    var array = []
-    if (props.lenght) {
-        for (let index = 0; index < props.lenght; index++) {
-            array.push(products[index]);
-        }
-    } else {
-        array = products
-    }
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const productsRef = collection(db, "products");
+                const snapshot = await getDocs(productsRef);
+                const dataArray = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                console.log(dataArray);
+                setData(dataArray)
+            } catch (error) {
+                console.log(error.message);
+            }
+        };
+        fetchData();
+    }, []);
+
 
     return (
         <>
-            <div id='produts'>
-                {array.map((product) => { return (<Product data={product}></Product>) })}
+            <div className='display-products'>
+                {data.map((product) => { return (<Product product={product}></Product>) })}
             </div>
         </>
     )

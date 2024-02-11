@@ -9,6 +9,8 @@ import Footer from './components/footer';
 import Login from './pages/index/login';
 import Register from './pages/index/register';
 import ShoppinCart from './pages/index/shoppingCart';
+import AdminProduct from './admin/product';
+import Loading from './pages/index/loading';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/my-cart' element={<ShoppinCart />} />
             <Route path='/*' element={<Page404 />} />
+            <Route path='/admin/product' element={<AdminProduct />} />
+            <Route path='/test' element={<Loading />} />
           </Routes>
           <Footer />
         </div>
